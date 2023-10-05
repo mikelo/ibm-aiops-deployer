@@ -592,7 +592,7 @@
 
 
     #BASE_DOMAIN="dev-aiops-instana-core.$CLUSTER_NAME"
-    BASE_DOMAIN="$CLUSTER_NAME"
+    BASE_DOMAIN="instana.$CLUSTER_NAME"
     echo $BASE_DOMAIN
     
   ignore_errors: true

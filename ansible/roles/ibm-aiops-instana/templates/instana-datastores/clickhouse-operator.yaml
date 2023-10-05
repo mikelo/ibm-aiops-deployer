@@ -3727,9 +3727,9 @@ data:
 #
 # NAMESPACE=instana-datastores
 # COMMENT=
-# OPERATOR_IMAGE=altinity/clickhouse-operator:0.21.2
+# OPERATOR_IMAGE=quay.io/michele_orlandi_it/clickhouse-operator:0.21.2
 # OPERATOR_IMAGE_PULL_POLICY=Always
-# METRICS_EXPORTER_IMAGE=altinity/metrics-exporter:0.21.2
+# METRICS_EXPORTER_IMAGE=quay.io/michele_orlandi_it/metrics-exporter:0.21.2
 # METRICS_EXPORTER_IMAGE_PULL_POLICY=Always
 #
 # Setup Deployment for clickhouse-operator
@@ -3774,7 +3774,7 @@ spec:
             name: etc-clickhouse-operator-usersd-files
       containers:
         - name: clickhouse-operator
-          image: altinity/clickhouse-operator:0.21.2
+          image: quay.io/michele_orlandi_it/clickhouse-operator:0.21.2
           imagePullPolicy: Always
           volumeMounts:
             - name: etc-clickhouse-operator-folder
@@ -3839,7 +3839,7 @@ spec:
                   resource: limits.memory
 
         - name: metrics-exporter
-          image: altinity/metrics-exporter:0.21.2
+          image: quay.io/michele_orlandi_it/metrics-exporter:0.21.2
           imagePullPolicy: Always
           volumeMounts:
             - name: etc-clickhouse-operator-folder
